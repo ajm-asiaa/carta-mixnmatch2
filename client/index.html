@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CARTA Mix 'N Match 2.0</title>
+    <link href="txtstyle.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="client.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<input type="hidden" id="session-id" value="your-session-id">
+
+ <header style="display: flex; align-items: center;">
+    <div class="imgbox">
+      <img class="center-fit" src="carta_logo.png" alt="CARTA Logo" style="height: 100px;">
+    </div>
+    <h1 id="header_title" style="margin-left: 10px;">Welcome to CARTA Mix 'N Match 2.0 *** under construction *** </h1>
+  <div id="buildOverlay">
+    <div id="buildOverlayText">Building carta-frontend and/or carta-backend.</div>
+  </div>
+  <div id="busyOverlay">
+    <div id="busyOverlayText">The system is busy. Please wait.</div>
+  </div>
+  </header>
+
+    <div class="divTable blueTable2">
+        <p>Here you can combine any <a href="https://github.com/CARTAvis/carta-frontend/network">carta-frontend</a> commit with any <a href="https://github.com/CARTAvis/carta-backend/network">carta-backend</a> commit.</p>
+        <p>Each entry is identified with 'branch name', 'commit ID', and commit 'date/time'</p>
+        <p>Simply select a carta-frontend and a carta-backend commit, then press 'Go'. The server will proceed to build a production carta-frontend and a carta-backend executable, and then open it. It may take ~10 minutes to build.</p>
+        <p>Bold font indicates the commit has been previously built and is ready to start immeadiately.</p>
+	<p>Note: The carta-frontend and carta-backend commits need to use the same protobuf versions in order to work. </p>
+
+
+<div class="container">
+  <div class="buttonContainer">
+      <button class="myButton" id="go-button">Go</button>
+  </div>
+  <div class="tableContainer blueTable">
+      <div class="divTableHeading">
+          <div class="divTableRow">
+              <div class="divTableHead">carta-frontend</div>
+              <div class="divTableHead">carta-backend</div>
+          </div>
+      </div>
+      <div class="divTableBody">
+          <div class="divTableRow">
+              <div class="divTableCell latest-dev-frontend">
+                  <div id="latest-dev-frontend-commits" class="commit-container"></div>
+                  <hr>
+                  <div id="frontend-commits" class="commit-container"></div>
+              </div>
+              <div class="divTableCell latest-dev-backend">
+                  <div id="latest-dev-backend-commits" class="commit-container"></div>
+                  <hr>
+                  <div id="backend-commits" class="commit-container"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="buttonContainer">
+      <button class="myButton" id="go-button">Go</button>
+  </div>
+</div>
+
+
+    </div>
+
+</body>
+</html>
+
